@@ -1,0 +1,26 @@
+<div ng-controller = "clienteController">
+
+{{cliente.nome}}
+</br>
+<input type="text" value="Nome" ng-model="cliente.nome">
+<input type="button" value="Salvar" ng-click="salvarCliente()">
+</br>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="cli in clientes">
+            <th scope="row">{{cli.id}}</th>
+            <td>{{cli.nome}}</td>
+            <td><input type="button" value="Editar" ng-click="editarCliente(cli)"></td>
+            <td><input type="button" value="Remover" ng-click="excluirCliente(cli)"></td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
